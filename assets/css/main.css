@@ -295,6 +295,15 @@ input, select, textarea {
 		margin-left: 72.5%;
 	}
 
+	@media screen and (max-width: 480px) {
+		#work a .major,
+		#work2 a .major,
+		#work3 a .major {
+			transition: color .2s linear;
+			margin-left: 65%;
+		}
+	}
+
 	#work a .major:hover,
 	#work2 a .major:hover,
 	#work3 a .major:hover {
