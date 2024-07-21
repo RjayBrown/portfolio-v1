@@ -309,7 +309,7 @@ input, select, textarea {
 		#work2 a .major,
 		#work3 a .major {
 			transition: color .2s linear;
-			margin-left: 65%;
+			margin-left: 60%;
 		}
 	}
 
