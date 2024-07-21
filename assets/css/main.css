@@ -169,7 +169,7 @@ input, select, textarea {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+		transition: color 0.2s linear, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
@@ -177,6 +177,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
+			color: rgb(55, 121, 226);
 		}
 
 	strong, b {
@@ -192,6 +193,10 @@ input, select, textarea {
 		margin: 0 0 2rem 0;
 		font-size: 1.5rem;
 		line-height: 1.4;
+	}
+
+	p#intro {
+		text-align: center;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
