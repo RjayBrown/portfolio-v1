@@ -200,7 +200,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	p#intro.cs {
+	p#intro.bottom {
 		animation: color-switch 4s linear 0ms infinite alternate;
 	}
 
@@ -271,25 +271,34 @@ input, select, textarea {
 		margin: 0 0 1rem 0;
 	}
 
-	h4.card {
-		color: rgb(195, 195, 195);
-	}
-
-	h4.card {
-		color: rgb(195, 195, 195);
-	}
-
-	h4.major.card {
+	h3.card {
+		color: rgb(142, 185, 255);
 		margin: 2rem 0 1rem 0;
-		color: rgb(195, 195, 195);
+	}
+
+	h3.card.last {
+		margin-top: 2rem;
+	}
+
+	h4.card {
+		color: rgb(210, 210, 210);
+		margin: 0 0 1rem 2.5%
 	}
 
 	h4.card.last {
-		margin: 0 0 2rem 0;
+		margin: 0 0 2rem 2.5%;
+		color: rgb(210, 210, 210);
 	}
 
 	h5 {
 		font-size: 0.7rem;
+		color: rgb(210, 210, 210);
+	}
+
+	#work h5.last,
+	#work2 h5.last,
+	#work3 h5.last {
+		margin: 0 0 1.5rem 5%;
 	}
 
 	#work h5,
@@ -317,7 +326,7 @@ input, select, textarea {
 	#work a .major:hover,
 	#work2 a .major:hover,
 	#work3 a .major:hover {
-		color: rgb(55, 121, 226)
+		color: rgb(142, 185, 255)
 	}
 
 	h6 {
