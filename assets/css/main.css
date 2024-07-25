@@ -168,7 +168,7 @@ input, select, textarea {
 
 	@keyframes color-switch {
 		0% {
-			color: rgb(55, 121, 226);
+			color: rgb(97, 137, 248);
 		}
 
 		50% {
@@ -277,7 +277,7 @@ input, select, textarea {
 	}
 
 	h3.card {
-		color: rgb(145, 210, 230);
+		color: rgb(100, 185, 255);
 		margin: 2rem 0 1rem 0;
 	}
 
@@ -292,7 +292,7 @@ input, select, textarea {
 	h4.card {
 		color: rgb(255, 255, 255);
 		margin: 0 0 1rem 3.5%;
-		border-left: 3px solid rgb(145, 210, 230);
+		border-left: 3px solid rgb(100, 185, 255);
 		padding-left: 2%;
 	}
 
@@ -326,7 +326,7 @@ input, select, textarea {
 	#work3 a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
-		color: rgb(145, 210, 230)
+		color: rgb(100, 185, 255);
 	}
 
 	@media screen and (max-width: 480px) {
