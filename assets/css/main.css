@@ -317,37 +317,37 @@ input, select, textarea {
 		font-size: 0.6rem;
 	}
 
-	#work h5.last,
-	#work2 h5.last,
-	#work3 h5.last {
+	#reach-hub h5.last,
+	#intrade h5.last,
+	#id3 h5.last {
 		margin: 0 0 1.5rem 10%;
 	}
 
-	#work h5,
-	#work2 h5,
-	#work3 h5 {
+	#reach-hub h5,
+	#intrade h5,
+	#id3 h5 {
 		margin: 0 0 2% 10%;
 	}
 
-	#work a .major,
-	#work2 a .major,
-	#work3 a .major {
+	#reach-hub a .major,
+	#intrade a .major,
+	#id3 a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
 		color: rgb(159, 212, 255);
 	}
 
 	@media screen and (max-width: 480px) {
-		#work a .major,
-		#work2 a .major,
-		#work3 a .major {
+		#reach-hub a .major,
+		#intrade a .major,
+		#id3 a .major {
 			margin-left: 60%;
 		}
 	}
 
-	#work a .major:hover,
-	#work2 a .major:hover,
-	#work3 a .major:hover {
+	#reach-hub a .major:hover,
+	#intrade a .major:hover,
+	#id3 a .major:hover {
 		color: rgb(73, 139, 245);
 	}
 
@@ -1724,9 +1724,9 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		#work .main video,
-		#work2 .main video,
-		#work3 .main video {
+		#reach-hub .main video,
+		#intrade .main video,
+		#id3 .main video {
 			width: 100%;
 		}
 
