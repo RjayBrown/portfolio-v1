@@ -166,6 +166,24 @@ input, select, textarea {
 		line-height: 1.65;
 	}
 
+	@keyframes color-switch {
+		0% {
+			color: rgb(55, 121, 226);
+		}
+
+		50% {
+			color: rgb(173, 216, 230);
+		}
+
+		100% {
+			color: rgb(255, 255, 255);
+		}
+	}
+
+	.swd {
+		animation: color-switch 4s linear 0ms infinite alternate;
+	}
+
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -238,37 +256,24 @@ input, select, textarea {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
-	}
-
-	@keyframes color-switch {
-		0% {
-			color: rgb(55, 121, 226);
-		}
-
-		50% {
-			color: rgb(173, 216, 230);
-		}
-
-		100% {
-			color: rgb(255, 255, 255);
-		}
-	}
-
-	h2.swd {
-		animation: color-switch 4s linear 0ms infinite alternate;
-	}
-
-	h3 {
-		font-size: 1rem;
-	}
-
-	h4 {
-		font-size: 0.8rem;
+		color: rgb(255, 255, 255);
 	}
 
 	h2.card,
 	h4.card {
 		margin: 0 0 1rem 0;
+	}
+
+	h2.last {
+		margin: 3.5rem 0 1rem 0
+	}
+
+	h2.last + p {
+		margin: 1rem 1rem 3rem 1rem;
+	}
+
+	h3 {
+		font-size: 1rem;
 	}
 
 	h3.card {
@@ -280,14 +285,19 @@ input, select, textarea {
 		margin-top: 2rem;
 	}
 
+	h4 {
+		font-size: 0.9rem;
+	}
+
 	h4.card {
-		color: rgb(210, 210, 210);
-		margin: 0 0 1rem 2.5%
+		color: rgb(255, 255, 255);
+		margin: 0 0 1rem 3.5%;
+		border-left: 3px solid rgb(142, 185, 255);
+		padding-left: 2%;
 	}
 
 	h4.card.last {
-		margin: 0 0 2rem 2.5%;
-		color: rgb(210, 210, 210);
+		margin: 0 0 2rem 3.5%;
 	}
 
 	h5 {
@@ -295,16 +305,20 @@ input, select, textarea {
 		color: rgb(210, 210, 210);
 	}
 
+	h6 {
+		font-size: 0.6rem;
+	}
+
 	#work h5.last,
 	#work2 h5.last,
 	#work3 h5.last {
-		margin: 0 0 1.5rem 5%;
+		margin: 0 0 1.5rem 10%;
 	}
 
 	#work h5,
 	#work2 h5,
 	#work3 h5 {
-		margin: 0 0 2% 5%;
+		margin: 0 0 2% 10%;
 	}
 
 	#work a .major,
@@ -312,13 +326,13 @@ input, select, textarea {
 	#work3 a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
+		color: rgb(142, 185, 255)
 	}
 
 	@media screen and (max-width: 480px) {
 		#work a .major,
 		#work2 a .major,
 		#work3 a .major {
-			transition: color .2s linear;
 			margin-left: 60%;
 		}
 	}
@@ -326,11 +340,7 @@ input, select, textarea {
 	#work a .major:hover,
 	#work2 a .major:hover,
 	#work3 a .major:hover {
-		color: rgb(142, 185, 255)
-	}
-
-	h6 {
-		font-size: 0.6rem;
+		color: rgb(73, 139, 245);
 	}
 
 	span.hidden {
