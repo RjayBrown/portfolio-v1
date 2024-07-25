@@ -218,6 +218,14 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	p#intro a {
+		color: rgb(159, 212, 255);
+	}
+
+	p#intro a:hover {
+		color: rgb(73, 139, 245)
+	}
+
 	p#intro.bottom {
 		animation: color-switch 4s linear 0ms infinite alternate;
 	}
@@ -277,7 +285,7 @@ input, select, textarea {
 	}
 
 	h3.card {
-		color: rgb(100, 185, 255);
+		color: rgb(159, 212, 255);
 		margin: 2rem 0 1rem 0;
 	}
 
@@ -292,7 +300,7 @@ input, select, textarea {
 	h4.card {
 		color: rgb(255, 255, 255);
 		margin: 0 0 1rem 3.5%;
-		border-left: 3px solid rgb(100, 185, 255);
+		border-left: 3px solid rgb(159, 212, 255);
 		padding-left: 2%;
 	}
 
@@ -326,7 +334,7 @@ input, select, textarea {
 	#work3 a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
-		color: rgb(100, 185, 255);
+		color: rgb(159, 212, 255);
 	}
 
 	@media screen and (max-width: 480px) {
