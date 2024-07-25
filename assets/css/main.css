@@ -172,7 +172,7 @@ input, select, textarea {
 		}
 
 		50% {
-			color: rgb(173, 216, 230);
+			color: rgb(170, 210, 230);
 		}
 
 		100% {
@@ -181,7 +181,7 @@ input, select, textarea {
 	}
 
 	.swd {
-		animation: color-switch 4s linear 0ms infinite alternate;
+		animation: color-switch 3s linear 0ms infinite alternate;
 	}
 
 	a {
@@ -196,7 +196,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: rgb(55, 121, 226);
+			color: rgb(73, 139, 245)
 		}
 
 	strong, b {
@@ -277,7 +277,7 @@ input, select, textarea {
 	}
 
 	h3.card {
-		color: rgb(142, 185, 255);
+		color: rgb(145, 210, 230);
 		margin: 2rem 0 1rem 0;
 	}
 
@@ -292,7 +292,7 @@ input, select, textarea {
 	h4.card {
 		color: rgb(255, 255, 255);
 		margin: 0 0 1rem 3.5%;
-		border-left: 3px solid rgb(142, 185, 255);
+		border-left: 3px solid rgb(145, 210, 230);
 		padding-left: 2%;
 	}
 
@@ -326,7 +326,7 @@ input, select, textarea {
 	#work3 a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
-		color: rgb(142, 185, 255)
+		color: rgb(145, 210, 230)
 	}
 
 	@media screen and (max-width: 480px) {
