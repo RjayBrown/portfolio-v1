@@ -184,6 +184,10 @@ input, select, textarea {
 		animation: color-switch 3s linear 0ms infinite alternate;
 	}
 
+	span.line {
+		text-decoration: underline;
+	}
+
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
