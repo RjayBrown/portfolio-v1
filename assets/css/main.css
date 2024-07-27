@@ -184,6 +184,10 @@ input, select, textarea {
 		animation: color-switch 3s linear 0ms infinite alternate;
 	}
 
+	h3.swd {
+		line-height: .5em;
+	}
+
 	span.line {
 		text-decoration: underline;
 	}
