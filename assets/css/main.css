@@ -875,6 +875,10 @@ input, select, textarea {
 				margin: 1rem auto 3rem auto;
 			}
 
+			.major.card.align-center {
+				margin: 3rem auto 2rem auto;
+			}
+
 		@media screen and (max-width: 736px) {
 
 			.image.main {
@@ -1103,6 +1107,31 @@ input, select, textarea {
 					display: flex;
 					place-content: center center;
 					margin-top: -5%;
+				}
+
+				ul.icons.center.stack {
+					display: flex;
+					flex-flow: row wrap;
+					place-content: center center;
+					margin: 2.5% auto 5% auto;
+				}
+
+				ul.icons.center.stack li {
+					width: 40px;
+					margin: 0 5px;
+				}
+				ul.icons.center.stack li img {
+					width: 35px;
+				}
+
+				@media screen and (max-width: 480px) {
+					ul.icons.center.stack li {
+						margin: 0;
+					}
+
+					ul.icons.center.stack li img {
+						width: 30px;
+					}
 				}
 
 /* Table */
