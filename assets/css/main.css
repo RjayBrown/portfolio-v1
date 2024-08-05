@@ -327,19 +327,22 @@ input, select, textarea {
 
 	#reach-hub h5.last,
 	#intrade h5.last,
-	#id3 h5.last {
+	#id3 h5.last,
+	#war h5.last {
 		margin: 0 0 1.5rem 10%;
 	}
 
 	#reach-hub h5,
 	#intrade h5,
-	#id3 h5 {
+	#id3 h5,
+	#war h5 {
 		margin: 0 0 2% 10%;
 	}
 
 	#reach-hub a .major,
 	#intrade a .major,
-	#id3 a .major {
+	#id3 a .major,
+	#war a .major {
 		transition: color .2s linear;
 		margin-left: 72.5%;
 		color: rgb(159, 212, 255);
@@ -355,7 +358,8 @@ input, select, textarea {
 
 	#reach-hub a .major:hover,
 	#intrade a .major:hover,
-	#id3 a .major:hover {
+	#id3 a .major:hover,
+	#war a .major:hover {
 		color: rgb(73, 139, 245);
 	}
 
