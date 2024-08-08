@@ -10,7 +10,7 @@ Portfolio Site including links to my projects, freelancing services, and ways to
 
 ## Lessons Learned:
 
-I learned about managing specificity while maintaining code organization and structure, it became much easier to navigate the file and also make changes that don't affect the responsiveness of the design. For this project working with transitions and animations was very educational, and I definitely plan to experiment with transform as well.
+I learned about managing specificity while maintaining code organization and structure, it became much easier to navigate the files and make changes that don't affect the responsiveness of the design. For this project working with transitions and animations was very educational, and I definitely plan to experiment with transform as well.
 
 ## Optimizations:
 
