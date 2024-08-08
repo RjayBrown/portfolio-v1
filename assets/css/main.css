@@ -221,6 +221,7 @@ input, select, textarea {
 		font-size: 1.5rem;
 		line-height: 1.4;
 	}
+	/* Home */
 
 	p#intro {
 		text-align: center;
@@ -274,7 +275,7 @@ input, select, textarea {
 		letter-spacing: 0.5rem;
 		color: rgb(255, 255, 255);
 	}
-
+	/* Cards, Headings, & Buttons */
 	h2.card,
 	h4.card {
 		margin: 0 0 1rem 0;
