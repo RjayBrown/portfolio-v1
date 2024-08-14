@@ -101,15 +101,15 @@ input, select, textarea {
 
 	@keyframes bg-switch {
 		0% {
-			background: rgb(45, 11, 40);
+			background: rgb(19, 2, 16);
 		}
 
 		50% {
-			background: rgb(45, 4, 13);
+			background: rgb(2, 5, 20);
 		}
 
 		100% {
-			background: rgb(7, 13, 50);
+			background: rgb(20, 1, 6);
 		}
 	}
 
@@ -168,7 +168,7 @@ input, select, textarea {
 
 	@keyframes color-switch {
 		0% {
-			color: rgb(97, 137, 248);
+			color: rgb(102, 153, 241);
 		}
 
 		50% {
