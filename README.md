@@ -10,8 +10,4 @@ Portfolio Site including links to my projects, freelancing services, and ways to
 
 ## Lessons Learned:
 
-I learned about managing specificity while maintaining code organization and structure, it became much easier to navigate and make changes while maintaining the responsiveness of the design. For this project working with transitions and animations was very educational, and I definitely plan to experiment with transform as well.
-
-## Optimizations:
-
-Planning to add comments for sections of the project as I continue making changes.
+For this project my goal was to understand semantic HTML structure and experiment with as many CSS styles as possible. I'm more comfortable with managing specificity and maintaining code organization, so it's easier to make changes while maintaining the responsiveness of the design. Working with transitions and animations was fun, can't stop noticing cool animations on different websites (the animation for the YouTube like button is 🔥) I definitely plan to continue learning about more advanced CSS styles and features.
