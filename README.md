@@ -1,13 +1,36 @@
-# My Portfolio
+<a name="readme-top"></a>
 
-Portfolio Site including links to my projects, freelancing services, and ways to connect.
+<!-- PROJECT LOGO -->
+<div align="center">
+  <a href="project-url">
+    <img src="project-logo.png" alt="project-name" height="64">
+  </a>
+<h1 align="center">My Portfolio v1</h1>
+  <h3 align="center">
+    <a href="project.url" target="_blank" rel="noreferrer noopener">View Live</a>
+  </h3>
+  <h2></h2>
+</div>
 
-## How It's Made:
+<!-- SCREENSHOT -->
 
-**Tech used:** HTML5, CSS3, JavaScript
+<div align="center">
+  <img width="800" alt="project-screenshot" src="project-screenshot.png">
+</div>
 
-**Link to site:** https://rjbrown.dev
+## Built With
 
-## Lessons Learned:
+[![HTML](https://img.shields.io/badge/HTML-%23282828?style=for-the-badge&logo=HTML5&logoColor=%23E34F26&logoSize=auto)](https://html.com/html5/) [![CSS](https://img.shields.io/badge/CSS3-%23282828?style=for-the-badge&logo=CSS3&logoColor=%231572B6&logoSize=auto)](https://www.w3schools.com/css/default.asp) [![JavaScript](https://img.shields.io/badge/JAVASCRIPT-%23282828?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E&logoSize=auto)](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
 
-For this project my goal was to understand semantic HTML structure and experiment with as many CSS styles as possible. I'm more comfortable with managing specificity and maintaining code organization, so it's easier to make changes while maintaining the responsiveness of the design. Working with transitions and animations was fun, can't stop noticing cool animations on different websites (the animation for the YouTube like button is 🔥) I definitely plan to continue learning about more advanced CSS styles and features.
+## Lessons Learned
+
+- Box Model
+- Positioning HTML Elements
+- CSS Selectors & Specificity
+- CSS Animations (Keyframes)
+
+My goal for this project was to understand semantic HTML structure and experiment with as many CSS styles as possible. It really changed the way I view the web, I can't help noticing cool animations on different websites (the YouTube like & subscribe button animations are 🔥)! I definitely plan to continue learning about more advanced CSS styles and features.
+
+Built using Dimension by [HTML5 UP](html5up.net) | @ajlkn
+
+Free for personal and commercial use under the [CCA 3.0 license](html5up.net/license)
