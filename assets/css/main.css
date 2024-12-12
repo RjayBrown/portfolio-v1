@@ -217,7 +217,7 @@ html {
 }
 
 body {
-	background: #1b1f22;
+	/* background: #1b1f22; */
 }
 
 body.is-preload *,
@@ -432,12 +432,18 @@ a h3:hover {
 .bold-link {
 	border: none;
 	padding: 0.5rem;
-	margin-top: 1rem !important;
+	margin: 1rem !important;
 	text-align: center;
 }
 
 .bold-link.about {
-	margin-top: 1rem;
+	width: fit-content;
+	margin: 1rem auto !important;
+}
+
+.bold-link.left {
+	text-align: left;
+	margin-left: 0 !important;
 }
 
 h3.card {
@@ -648,6 +654,8 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
+input[type="time"],
 select,
 textarea {
 	-moz-appearance: none;
@@ -677,6 +685,8 @@ input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
 input[type="tel"]:invalid,
+input[type="date"]:invalid,
+input[type="time"]:invalid,
 select:invalid,
 textarea:invalid {
 	box-shadow: none;
@@ -686,6 +696,8 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
 select:focus,
 textarea:focus {
 	background: rgba(255, 255, 255, 0.075);
@@ -719,8 +731,10 @@ select::-ms-expand {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="date"],
+input[type="time"],
 select {
-	height: 2.75rem;
+	height: 2.5rem;
 }
 
 textarea {
@@ -996,7 +1010,7 @@ input[type="radio"] + label:before {
 	height: 12rem;
 	width: 12rem;
 	border-radius: 50%;
-	margin: 5rem auto 2rem auto;
+	margin: 3rem auto 3rem auto;
 }
 
 .image.main2 + .major.card {
@@ -1438,6 +1452,7 @@ button.primary,
 input[type="submit"].primary:hover {
 	background-color: rgb(159, 212, 255);
 	border: none;
+	box-shadow: inset 0 0 0 1px transparent;
 }
 
 input[type="submit"].disabled,
