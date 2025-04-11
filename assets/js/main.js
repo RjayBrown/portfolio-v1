@@ -333,17 +333,17 @@
 		});
 })(jQuery);
 
-// Form Validation (Name)
-let nameField = document.getElementById("name");
-let companyField = document.getElementById("company");
+// Form Validation (Name & Subject)
+const nameField = document.getElementById("name");
+const subjectField = document.getElementById("subject");
 
 // remove validation message when user types input
 nameField.addEventListener("input", (e) => {
 	nameField.setCustomValidity("");
 });
 
-companyField.addEventListener("input", (e) => {
-	companyField.setCustomValidity("");
+subjectField.addEventListener("input", (e) => {
+	subjectField.setCustomValidity("");
 });
 
 // Custom validation message for invalid input
@@ -351,20 +351,28 @@ nameField.addEventListener("invalid", (e) => {
 	nameField.setCustomValidity("Please enter a minimum of 3 characters.");
 });
 
-companyField.addEventListener("invalid", (e) => {
-	companyField.setCustomValidity(
-		"Name must be a minimum of 3 characters long."
+subjectField.addEventListener("invalid", (e) => {
+	subjectField.setCustomValidity(
+		"Please select a subject from the dropdown list."
 	);
 });
 
 // Form Validation (Date)
 const dateField = document.querySelector("#date");
 
-// Limits form input to 1 week out
+dateField.addEventListener("input", (e) => {
+	dateField.setCustomValidity("");
+});
+
+dateField.addEventListener("invalid", (e) => {
+	dateField.setCustomValidity("Please select an available date.");
+});
+
+// Configures date limit used in form
 const minDate = generateMinDate(7);
 dateField.setAttribute("min", minDate);
 
-// Logic
+// Returns the formatted minimum date (string)
 function generateMinDate(daysToAdd) {
 	const date = new Date();
 	date.setDate(date.getDate() + daysToAdd);

@@ -56,15 +56,15 @@
 				<!-- About -->
 				<article id="about">
 					<h1 class="align-center">Randall Brown</h1>
-					<img class="image main2" src="images/headshot2.jpg" alt="" />
+					<img class="image main" src="images/headshot2.jpg" alt="" />
 
 					<h2 class="card align-center">About Me</h2>
 
 					<p id="intro" class="top">
 						I enjoy trying new things and being creative! When I'm not coding,
 						you can find me listening to some music or exploring fun ways to
-						stay active. I also volunteer time building educational resources
-						for web development.
+						stay active. I also create interactive educational resources for web
+						development.
 					</p>
 
 					<div class="icon-container">
@@ -89,30 +89,48 @@
 					>
 
 					<p id="intro" class="top">
-						My current focus is on creating web applications designed to support
-						young professionals. Every new challenge is an opportunity for
-						growth!
+						My current focus is on building web applications designed to support
+						young professionals, advisors, and local community organizations.
+						Every new challenge is an opportunity for growth!
 					</p>
+					<hr />
 
 					<h2 class="card">Services</h2>
-					<h3 class="major card">Websites</h3>
-					I build responsive websites and landing pages that look great on all
-					devices using HTML, CSS, and JavaScript along with a range of
-					established technologies and design tools. If your business doesn't
-					have an online presence or is looking to modernize your current
-					website, Feel free to
-					<a href="#contact">get in touch</a>!
+					<h3 class="major card">Web Development</h3>
+					<p id="intro" class="small">
+						I create responsive websites and landing pages using established
+						frameworks, libraries, UI/UX design tools and content management
+						systems. If your business doesn't have an online presence, or needs
+						to modernize with a website that is accessible and looks great on
+						all devices, feel free to
+						<a href="#contact">get in touch</a>!
+					</p>
 
-					<h3 class="major card">Full-Stack Web Development</h3>
-					I enjoy back-end development as much as bringing UI designs to life,
-					and use my problem solving skills to build web solutions that are both
-					dynamic and functional. I'm able to integrate systems and address
-					specific business needs, whether you're looking for new ways to drive
-					value for customers or improve existing services with new
-					user-friendly features. If you need a customized build you can
-					schedule a <a href="#contact">free consultation</a>. I'd be happy to
-					help!
-					<p class="hidden"></p>
+					<h3 class="major card">Full-Stack Software Development</h3>
+					<p id="intro" class="small">
+						Back-end development keeps me engaged as much as bringing UI/UX
+						designs to life, so I'm able to build web applications that are
+						dynamic and functional. I can also integrate systems and services
+						that focus on your specific needs, adding business value by making
+						processes more efficient or improving the overall customer
+						experience.
+					</p>
+
+					<div class="q-card">
+						<h3>Key Q's</h3>
+						<p class="q"><b>-</b> What <span>frustrates</span> you the most?</p>
+						<p class="q"><b>-</b> What do your customers <span>need?</span></p>
+					</div>
+
+					<p id="intro" class="small">
+						Each consultation begins with the answer to these questions.
+						Investing time in identifying opportunities and prioritizing changes
+						lead to better decisions and a positive impact on sustainable
+						growth. You can
+						<a href="#contact">schedule a free consultation here</a>. If you or
+						your customers have pain points, I'm happy to provide technical
+						recommendations for an ideal solution!
+					</p>
 
 					<div class="card-link">
 						<a
@@ -155,7 +173,7 @@
 				<!-- Contact -->
 				<article id="contact">
 					<h1 class="card">Contact</h1>
-					<form action="https://getform.io/f/apjmmlpa" method="POST" netlify>
+					<form method="POST" netlify>
 						<div class="fields">
 							<div class="field half">
 								<label for="name">Name</label>
@@ -163,7 +181,7 @@
 									type="text"
 									name="name"
 									id="name"
-									pattern="\w{3,}"
+									pattern="[\w\s]{3,}"
 									placeholder="Name"
 									required
 								/>
@@ -179,27 +197,30 @@
 								/>
 							</div>
 							<div class="field">
-								<label for="org">Company Name</label>
+								<label for="company">Company Name</label>
 								<input
 									type="text"
 									name="company"
 									id="company"
-									pattern="\w{3,}"
 									placeholder="Company Name (If Applicable)"
-									required
 								/>
 							</div>
 							<div class="field">
 								<label for="subject">Subject</label>
 								<select type="text" name="subject" id="subject" required>
-									<option value="default" class="value" selected>
+									<option value="" class="value" selected disabled>
 										-- Choose a Subject --
 									</option>
-									<option value="coffee" class="value">☕️ Coffee Chat</option>
-									<option value="website" class="value">
+									<option value="Coffee Chat" class="value">
+										☕️ Coffee Chat
+									</option>
+									<option
+										value="Consultation - Website / Landing Page"
+										class="value"
+									>
 										🌐 Consultation - Website / Landing Page
 									</option>
-									<option value="app" class="value">
+									<option value="Consultation - Web Application" class="value">
 										🌐 Consultation - Web Application
 									</option>
 								</select>
@@ -216,6 +237,7 @@
 									id="time"
 									min="09:00"
 									max="18:00"
+									step="1800"
 									required
 								/>
 							</div>
