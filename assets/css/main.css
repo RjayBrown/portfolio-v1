@@ -6,6 +6,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+* {
+	scroll-behavior: smooth;
+}
 
 *::selection {
 	background: rgb(210, 210, 210);
@@ -190,7 +193,7 @@ html {
 
 @keyframes bg-switch {
 	0% {
-		background: rgb(19, 2, 16);
+		background: #130210;
 	}
 
 	50% {
@@ -297,9 +300,8 @@ a {
 		border-bottom-color 0.2s ease-in-out;
 	-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
 		border-bottom-color 0.2s ease-in-out;
-	transition: color 0.2s linear, background-color 0.2s ease-in-out,
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
 		border-bottom-color 0.2s ease-in-out;
-	border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 	text-decoration: none;
 	color: inherit;
 }
@@ -323,7 +325,7 @@ b {
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
 	text-decoration-thickness: 1px;
-	text-decoration-color: rgb(223, 73, 73);
+	text-decoration-color: rgb(102, 153, 241);
 }
 
 .q-card .q {
@@ -339,7 +341,8 @@ b {
 
 .q span {
 	font-weight: bold;
-	color: rgb(223, 73, 73);
+	color: rgb(238, 121, 121);
+	font-style: italic;
 }
 
 em,
@@ -361,11 +364,13 @@ p#intro.top {
 }
 
 p#intro a {
-	color: rgb(159, 212, 255);
+	color: rgb(238, 121, 121);
+	border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 }
 
 p#intro a:hover {
-	color: rgb(73, 139, 245);
+	color: rgb(223, 73, 73);
+	border-bottom: solid 1px rgba(255, 255, 255, 0.5);
 }
 
 p#intro.small {
@@ -426,34 +431,47 @@ h3 {
 	font-size: 1rem;
 }
 
-a h3 {
+a h3.chat {
+	border-top: 1px solid rgb(102, 153, 241);
+	width: fit-content;
+	padding: 1px;
+}
+
+.bold-link {
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
 	text-decoration-thickness: 1px;
 	text-decoration-color: rgb(102, 153, 241);
-	transition: color 0.2s linear, text-decoration 0.2s linear;
-}
+	transition: color 0.2s linear, text-decoration 0.2s ease-in,
+		border-top 0.2s linear;
 
-a h3:hover {
-	text-decoration-color: white;
-	color: rgb(73, 139, 245);
-}
-
-.bold-link {
 	border: none;
-	padding: 0.5rem;
-	margin: 1rem !important;
+	margin: 1rem auto !important;
 	text-align: center;
+
+	width: fit-content;
+	border-top: 1px solid rgb(102, 153, 241);
+	width: fit-content;
+}
+
+.bold-link:hover {
+	text-decoration-color: white;
+	border-color: white;
+	color: rgb(238, 121, 121);
+	border-top: 1px solid white;
+}
+
+.bold-link.alt {
+	margin: 0 auto !important;
+	border-bottom: none !important;
+}
+
+.bold-link.right {
+	text-align: right;
 }
 
 .bold-link.about {
-	width: fit-content;
-	margin: 1rem auto !important;
-}
-
-.bold-link.left {
-	text-align: left;
-	margin-left: 0 !important;
+	margin-top: 2rem !important;
 }
 
 h3.card {
@@ -474,6 +492,11 @@ h6 {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.card-link.top h1 {
+	line-height: 1;
+	margin: 0;
 }
 
 .card-link .icons.center {
@@ -537,7 +560,8 @@ pre code {
 hr {
 	border: 0;
 	border-bottom: solid 1px #ffffff;
-	margin: 2.75rem 0;
+	margin: 2.25rem 0;
+	padding: 0.5rem 0;
 }
 
 .align-left {
@@ -555,7 +579,7 @@ hr {
 /* Form */
 
 form {
-	margin: 0 0 2rem 0;
+	margin: 3rem 0;
 }
 
 form > :last-child {
@@ -1179,18 +1203,17 @@ ul.icons li a:active {
 ul.icons.center {
 	display: flex;
 	place-content: center center;
-	/* margin-top: -5%; */
 }
 
 ul.icons.center.stack {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	place-content: center center;
 	margin: 1rem auto 1rem auto;
 }
 
 .icon-container {
-	margin: 1rem auto;
+	margin: 2rem auto 1rem auto;
 	padding: 1rem;
 
 	border-radius: 5px;
@@ -1200,6 +1223,12 @@ ul.icons.center.stack {
 	animation: bg-switch2 4s linear 0ms infinite alternate;
 }
 
+@media screen and (max-width: 480px) {
+	.icon-container {
+		width: auto;
+	}
+}
+
 .icon-container h3 {
 	font-weight: bold;
 }
@@ -1207,6 +1236,16 @@ ul.icons.center.stack {
 #footer .icon-container {
 	background-color: transparent;
 	animation: none;
+}
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-container a {
+	border-bottom: none;
+	margin: 0 1rem;
 }
 
 ul.icons.center.stack.child {
@@ -1227,7 +1266,7 @@ ul.icons.center.stack li img {
 	}
 
 	ul.icons.center.stack li img {
-		width: 30px;
+		width: 24px;
 	}
 }
 
@@ -1884,6 +1923,7 @@ body.is-preload #header .content .inner {
 	-ms-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
+	padding-bottom: 2.5rem;
 }
 
 #main article .close {
