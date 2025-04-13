@@ -29,7 +29,9 @@
 			<!-- Header -->
 			<header id="header">
 				<div class="logo">
-					<span class="icon"><img src="images/avatar.jpg" alt="avatar" /></span>
+					<span class="icon"
+						><img class="img" src="images/avatar.jpg" alt="avatar"
+					/></span>
 				</div>
 				<div class="content">
 					<div class="inner">
@@ -59,55 +61,160 @@
 					<h2 class="major card">Web Development</h2>
 					<h3 class="card">Website / Landing Page</h3>
 					<p id="intro" class="small">
-						I create responsive web experiences using widely supported
+						I create responsively designed web experiences using reliable
 						technologies (libraries + frameworks), UI/UX design tools and
-						content management systems. If your business doesn't have an online
-						presence, or needs to modernize with a website that is accessible
-						and looks great on all devices, feel free to
-						<a href="#contact">get in touch</a>!
+						content management systems for simple updates and maitenance. If
+						your business doesn't have an online presence, or needs to modernize
+						with an updated website that is accessible and looks great on all
+						devices, you can
+						<a href="#contact">send a message</a> and get started right now!
 					</p>
 
 					<h3 class="card">Full-Stack Application</h3>
 					<p id="intro" class="small">
-						Back-end development keeps me engaged as much as bringing UI/UX
-						designs to life, so I'm able to build custom full stack web
-						applications that are dynamic and functional. I can also integrate
-						reliable systems and services that add value to your business,
-						making processes more efficient or improving the overall customer
-						experience.
+						I'm able to build and deploy custom web solutions that handle user
+						authentication, secure data storage, and core features that solve
+						problems specific to your business. A functional UI/UX design will
+						ensure customers or employees find what they need, and integrating
+						web services with analytics will provide real-time insights and
+						inform your decisions. You can
+						<a href="#consultation">request a custom solution</a>
+						to save money while making processes more reliable and efficient.
 					</p>
+
+					<hr id="consultation" />
 
 					<h2 class="major card">Consultation</h2>
 
 					<p id="intro" class="small">
-						We'll begin the consultation by identifying your business needs and
-						answering these key questions.
+						We'll begin with a simple consultation identifying your key business
+						needs.
 					</p>
-					<div class="q-card">
-						<h3>Key Q's</h3>
-						<p class="q">
-							<b>-</b> What is the <span>core focus</span> for your business
-							right now?
-						</p>
-						<p class="q">
-							<b>-</b> What are the most <span>frustrating tasks</span> for you
-							or your employees?
-						</p>
-						<p class="q">
-							<b>-</b> What <span>negative customer feedback</span> have you
-							received?
-						</p>
-					</div>
-					<!-- EDIT -->
+
+					<form method="GET" id="consultationForm">
+						<div class="fields">
+							<div class="field">
+								<label for="company"
+									>Company Name<span class="asterisk">*</span></label
+								>
+								<input
+									type="text"
+									name="company"
+									id="company"
+									pattern="[\w\s]{3,}"
+									placeholder="Company Name"
+									required
+								/>
+							</div>
+							<div class="field">
+								<label for="industry"
+									>Industry<span class="asterisk">*</span></label
+								>
+								<select type="text" name="industry" id="industry" required>
+									<option value="" class="value" selected disabled>
+										-- Choose an Industry --
+									</option>
+									<option value="Aerospace" class="value">Aerospace</option>
+									<option value="Agriculture" class="value">Agriculture</option>
+									<option value="Construction" class="value">
+										Construction
+									</option>
+									<option value="Creative" class="value">Creative</option>
+									<option value="Education" class="value">Education</option>
+									<option value="Energy" class="value">Energy</option>
+									<option value="Entertainment" class="value">
+										Entertainment
+									</option>
+									<option value="Finance" class="value">Finance</option>
+									<option value="Healthcare" class="value">Healthcare</option>
+									<option value="Hospitality" class="value">Hospitality</option>
+									<option value="Insurance" class="value">Insurance</option>
+									<option value="Legal" class="value">Legal</option>
+									<option value="Logistics" class="value">Logistics</option>
+									<option value="Manufacturing" class="value">
+										Manufacturing
+									</option>
+									<option value="Marketing" class="value">Marketing</option>
+									<option value="Nonprofit" class="value">Nonprofit</option>
+									<option value="Real Estate" class="value">Real Estate</option>
+									<option value="Retail" class="value">Retail</option>
+									<option value="Technology" class="value">Technology</option>
+									<option value="Telecommunications" class="value">
+										Telecommunications
+									</option>
+									<option value="Transportation" class="value">
+										Transportation
+									</option>
+								</select>
+							</div>
+							<div class="field">
+								<label for="answer1"
+									>QUESTION 1<span class="asterisk">*</span></label
+								>
+								<p class="q">
+									What is the
+									<span>top priority</span> for your business right now?
+								</p>
+								<textarea
+									name="answer1"
+									id="answer1"
+									rows="2"
+									placeholder="My top priority right now is..."
+									required
+								></textarea>
+							</div>
+							<div class="field">
+								<label for="answer2"
+									>QUESTION 2<span class="asterisk">*</span></label
+								>
+								<p class="q">
+									What are the most <span>frustrating tasks</span> for you or
+									your employees?
+								</p>
+								<textarea
+									name="answer2"
+									id="answer2"
+									rows="2"
+									placeholder="We always have trouble with..."
+									required
+								></textarea>
+							</div>
+							<div class="field">
+								<label for="answer3"
+									>QUESTION 3<span class="asterisk">*</span></label
+								>
+								<p class="q">
+									What <span>negative customer feedback</span> have you
+									received?
+								</p>
+								<textarea
+									name="answer3"
+									id="answer3"
+									rows="2"
+									placeholder="Some of our customers complain about...."
+								></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li>
+								<input type="submit" value="Save" class="primary" />
+							</li>
+							<li><input type="reset" value="Reset" class="reset" /></li>
+						</ul>
+					</form>
+					<h3 class="card" id="creating-value">Creating Value</h3>
 					<p id="intro" class="small">
-						Uncovering opportunities to make impactful changes while reducing
-						risk will help you prioritize where to invest time and resources.
-						Understanding the different trade-offs involved when making
-						decisions will ensure the tools used directly align with your
-						long-term goals. You can take the next step and
-						<a href="#contact">finish the free consultation</a> here. If you or
-						your customers have pain points, I'm happy to provide technical
-						recommendations for your ideal solution!
+						Your responses will help uncover opportunities to make impactful
+						changes and determine where to invest your time and resources.
+						Considering the trade-offs involved when choosing what tools and
+						systems to use reduces risk, ensuring that things work as expected
+						and align with your long-term goals. Take the next step and
+						<a href="#contact" id="contactLink"
+							>finish your free consultation</a
+						>
+						here. If you or your customers have pain points, we can use that
+						information to find an ideal solution for you to take action. I'm
+						happy to send a personalized proposal with specific recommendations!
 					</p>
 
 					<hr id="about" />
@@ -167,10 +274,10 @@
 						<a href="#services"><h3 class="bold-link">Services</h3></a>
 					</div>
 					<hr />
-					<form method="POST" netlify>
+					<form method="POST" id="appointmentForm" netlify>
 						<div class="fields">
 							<div class="field half">
-								<label for="name">Name</label>
+								<label for="name">Name<span class="asterisk">*</span></label>
 								<input
 									type="text"
 									name="name"
@@ -181,7 +288,7 @@
 								/>
 							</div>
 							<div class="field half">
-								<label for="email">Email</label>
+								<label for="email">Email<span class="asterisk">*</span></label>
 								<input
 									type="email"
 									name="email"
@@ -196,11 +303,52 @@
 									type="text"
 									name="company"
 									id="company"
-									placeholder="Company Name (If Applicable)"
+									placeholder="Company Name"
 								/>
 							</div>
 							<div class="field">
-								<label for="subject">Subject</label>
+								<label for="industry">Industry</label>
+								<select type="text" name="industry" id="industry">
+									<option value="" class="value" selected disabled>
+										-- Choose an Industry --
+									</option>
+									<option value="Aerospace" class="value">Aerospace</option>
+									<option value="Agriculture" class="value">Agriculture</option>
+									<option value="Construction" class="value">
+										Construction
+									</option>
+									<option value="Creative" class="value">Creative</option>
+									<option value="Education" class="value">Education</option>
+									<option value="Energy" class="value">Energy</option>
+									<option value="Entertainment" class="value">
+										Entertainment
+									</option>
+									<option value="Finance" class="value">Finance</option>
+									<option value="Healthcare" class="value">Healthcare</option>
+									<option value="Hospitality" class="value">Hospitality</option>
+									<option value="Insurance" class="value">Insurance</option>
+									<option value="Legal" class="value">Legal</option>
+									<option value="Logistics" class="value">Logistics</option>
+									<option value="Manufacturing" class="value">
+										Manufacturing
+									</option>
+									<option value="Marketing" class="value">Marketing</option>
+									<option value="Nonprofit" class="value">Nonprofit</option>
+									<option value="Real Estate" class="value">Real Estate</option>
+									<option value="Retail" class="value">Retail</option>
+									<option value="Technology" class="value">Technology</option>
+									<option value="Telecommunications" class="value">
+										Telecommunications
+									</option>
+									<option value="Transportation" class="value">
+										Transportation
+									</option>
+								</select>
+							</div>
+							<div class="field">
+								<label for="subject"
+									>Subject<span class="asterisk">*</span></label
+								>
 								<select type="text" name="subject" id="subject" required>
 									<option value="" class="value" selected disabled>
 										-- Choose a Subject --
@@ -209,22 +357,25 @@
 										☕️ Coffee Chat
 									</option>
 									<option
-										value="Consultation - Website / Landing Page"
+										value="Consultation - Standard Website (Info Page)"
 										class="value"
 									>
-										🌐 Consultation - Website / Landing Page
+										🌐 Consultation - Website (Static)
+									</option>
+									<option value="Consultation - Standard Website" class="value">
+										🌐 Consultation - Website (Dynamic)
 									</option>
 									<option value="Consultation - Web Application" class="value">
-										🌐 Consultation - Web Application
+										🌐 Consultation - Web Application (Website + Back-End)
 									</option>
 								</select>
 							</div>
 							<div class="field half">
-								<label for="date">Date</label>
+								<label for="date">Date<span class="asterisk">*</span></label>
 								<input type="date" name="date" id="date" required />
 							</div>
 							<div class="field half">
-								<label for="time">Time</label>
+								<label for="time">Time <span class="asterisk">*</span></label>
 								<input
 									type="time"
 									name="time"
@@ -236,7 +387,7 @@
 								/>
 							</div>
 							<div class="field">
-								<label for="message">Message</label>
+								<label for="message">Message </label>
 								<textarea
 									name="message"
 									id="message"
@@ -247,9 +398,9 @@
 						</div>
 						<ul class="actions">
 							<li>
-								<input type="submit" value="Send Message" class="primary" />
+								<input type="submit" value="Send" class="primary" />
 							</li>
-							<li><input type="reset" value="Reset" /></li>
+							<li><input type="reset" value="Reset" class="reset" /></li>
 						</ul>
 					</form>
 					<div class="card-link">

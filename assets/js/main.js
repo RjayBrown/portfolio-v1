@@ -333,22 +333,92 @@
 		});
 })(jQuery);
 
-// Form Validation (Name & Subject)
-const nameField = document.getElementById("name");
-const subjectField = document.getElementById("subject");
+// Get user data from local storage
+const saved = localStorage.getItem("data");
 
-// remove validation message when user types input
+const consultationForm = document.querySelector("#consultationForm");
+const companyName = document.querySelectorAll("#company")[0];
+const industry = document.querySelector("#industry");
+const answer1 = document.querySelector("#answer1");
+const answer2 = document.querySelector("#answer2");
+const answer3 = document.querySelector("#answer3");
+
+const appointmentForm = document.querySelector("#appointmentForm");
+const nameField = document.querySelector("#name");
+const subjectField = document.querySelector("#subject");
+const dateField = document.querySelector("#date");
+
+//ON PAGE LOAD
+// Use data from local storage to preload form fields
+window.onload = () => {
+	const answers = JSON.parse(saved);
+	const details = answers
+		? `${answers.answer1}. ${answers.answer2}. ${answers.answer3}`
+		: null;
+
+	const preloadFields = {
+		consultation: ["company", "industry", "answer1", "answer2", "answer3"],
+		appointment: ["company", "industry", "message"],
+	};
+
+	// Consultation Form
+	preloadFields.consultation.forEach((field) => {
+		if (answers) {
+			consultationForm.elements[field].value = answers[field];
+		} else {
+			consultationForm.elements[field].value = "";
+		}
+	});
+
+	// Appointment Form
+	preloadFields.appointment.forEach((field) => {
+		if (answers) {
+			field === "message"
+				? (appointmentForm.elements[field].value = details)
+				: (appointmentForm.elements[field].value = answers[field]);
+		} else {
+			appointmentForm.elements[field].value = null;
+		}
+	});
+};
+
+// ON FORM RESET
+// Clear both forms and local storage
+const formResetBtn = document.querySelectorAll(".reset");
+formResetBtn.forEach((btn, i) => {
+	btn.addEventListener("click", (e) => {
+		if (i === 0) {
+			companyName.focus();
+		} else {
+			location.assign(`${window.location.href.split("#")[0]}` + "#services");
+			companyName.focus();
+		}
+
+		consultationForm.reset();
+		appointmentForm.reset();
+		localStorage.clear();
+	});
+});
+
+/* FORM VALIDATION
+Displays a custom message for invalid inputs
+Removes message as the input value changes
+*/
+
+// APPOINTMENT FORM
+
+// Name
 nameField.addEventListener("input", (e) => {
 	nameField.setCustomValidity("");
 });
 
-subjectField.addEventListener("input", (e) => {
-	subjectField.setCustomValidity("");
-});
-
-// Custom validation message for invalid input
 nameField.addEventListener("invalid", (e) => {
 	nameField.setCustomValidity("Please enter a minimum of 3 characters.");
+});
+
+// Subject
+subjectField.addEventListener("input", (e) => {
+	subjectField.setCustomValidity("");
 });
 
 subjectField.addEventListener("invalid", (e) => {
@@ -357,8 +427,7 @@ subjectField.addEventListener("invalid", (e) => {
 	);
 });
 
-// Form Validation (Date)
-const dateField = document.querySelector("#date");
+// Date
 
 dateField.addEventListener("input", (e) => {
 	dateField.setCustomValidity("");
@@ -384,3 +453,18 @@ function generateMinDate(daysToAdd) {
 
 	return `${yyyy}-${mm}-${dd}`;
 }
+
+// CONSULTATION FORM
+
+// Save data to local storage
+consultationForm.addEventListener("submit", (e) => {
+	const data = {
+		company: companyName.value,
+		industry: industry.value,
+		answer1: answer1.value,
+		answer2: answer2.value,
+		answer3: answer3.value,
+	};
+	localStorage.setItem("data", JSON.stringify(data));
+	location.hash = "creating-value";
+});
