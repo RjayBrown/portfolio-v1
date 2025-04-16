@@ -8,6 +8,7 @@
 */
 * {
 	scroll-behavior: smooth;
+	text-wrap: balance;
 }
 
 *::selection {
@@ -321,32 +322,24 @@ b {
 	font-weight: 600;
 }
 
-.q-card {
-	margin: 2rem auto;
-}
-
-.q-card h3 {
-	text-decoration: underline;
-	text-underline-offset: 0.5rem;
-	text-decoration-thickness: 1px;
-	text-decoration-color: rgb(102, 153, 241);
-}
-
-.q-card .q {
-	margin-left: 0.75rem;
-	font-size: 1.25rem;
-}
-
-.q {
+.question {
 	display: block;
 	margin: 0.75rem auto;
 	font-size: 1rem;
 }
 
-.q span {
+.bold,
+.bold-alt {
 	font-weight: bold;
+}
+
+.bold {
 	color: rgb(238, 121, 121);
 	font-style: italic;
+}
+
+.bold-alt {
+	color: rgb(223, 73, 73);
 }
 
 em,
@@ -432,7 +425,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 .bold-link {
@@ -473,7 +466,7 @@ h3 {
 }
 
 h3.card {
-	margin: 2rem 0 1rem 0;
+	margin: 3rem 0 1rem 0;
 }
 
 h5 {
@@ -1429,9 +1422,17 @@ button.primary,
 }
 
 input[type="submit"].primary:hover {
-	background-color: rgb(159, 212, 255);
+	background-color: rgb(240, 240, 240);
 	border: none;
-	box-shadow: inset 0 0 0 1px transparent;
+	box-shadow: inset 0 0 2px rgb(102, 153, 241);
+}
+
+input[type="submit"].primary:focus {
+	box-shadow: 0 0 0 2px rgb(102, 153, 241);
+}
+
+input[type="reset"]:focus {
+	box-shadow: 0 0 0 2px #ffffff;
 }
 
 input[type="submit"].disabled,
