@@ -9,9 +9,9 @@
 		$body = $("body"),
 		$wrapper = $("#wrapper"),
 		$header = $("#header"),
-		$footer = $("#footer"),
 		$main = $("#main"),
-		$main_articles = $main.children("article");
+		$main_articles = $main.children("article"),
+		$footer = $("#footer");
 
 	// Breakpoints.
 	breakpoints({

@@ -15,15 +15,19 @@
 		/>
 		<meta
 			name="description"
-			content="Randall Brown is a software developer for 7ONE Consulting Group, a private agency based in NYC that provides web development and system integration services for small businesses and community organizations."
+			content="Randall Brown is a software developer at 7ONE Consulting Group, a private agency based in NYC that provides web development and system integration services for small businesses and community organizations."
 		/>
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/styles/main.css" />
 		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css" />
+			<link rel="stylesheet" href="assets/styles/noscript.css" />
 		</noscript>
+		<script
+			src="https://kit.fontawesome.com/8489be3c22.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 
-	<body class="is-preload">
+	<body id="page" class="is-preload">
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- Header -->
@@ -36,7 +40,7 @@
 				<div class="content">
 					<div class="inner">
 						<h1>Randall Brown</h1>
-						<h2 class="swd">Software Developer</h2>
+						<h2>Software Developer</h2>
 					</div>
 				</div>
 				<nav>
@@ -59,29 +63,30 @@
 					<hr />
 
 					<h2 class="major card">Web Development</h2>
-					<h3 class="card align-center">Website / Landing Page</h3>
-					<p id="intro" class="small align-center">
+					<h3 class="card">Website / Landing Page</h3>
+					<p id="intro" class="small">
 						I use different technologies, UI/UX design tools and content
 						management systems to build interactive websites that are responsive
-						and fully functional. If your business doesn't have a web presence
-						in 2025, or you need an update to engage more customers online,
-						<a href="#consultation">send a message</a> and you can have a modern
-						website that is accessible and looks great on all devices!
+						and fully functional. If your business doesn't have an online
+						presence in 2025, or you need something modern to reach a wider
+						audience,
+						<a href="#consultation">request a new website</a> and enjoy the
+						benefits of an improved web experience that looks great on all
+						devices!
 					</p>
 
-					<h3 class="card align-center">Full-Stack Application</h3>
-					<p id="intro" class="small align-center">
+					<h3 class="card">Full-Stack Application</h3>
+					<p id="intro" class="small">
 						If you need more advanced functionality, I can build and deploy
-						custom web solutions that handle user authentication and access
-						controls, secure data storage, and the core features needed to make
+						custom web applications that handle user authentication, secure data
+						storage, chat support, and other core features needed to make
 						managing your business simple and efficient. An intuitive design
-						will ensure customers and employees can easily find what they need.
-						You can
+						will ensure customers and employees easily find what they need. You
+						can
 						<a href="#consultation">request a custom solution</a>
 						designed specifically for your business. Integrating web services
-						with analytics will add value and provide real-time insights that
-						can be used to help reduce expenses while providing more value to
-						your customers.
+						and analytics will provide real-time insights that can be used for
+						reducing expenses, and identfying what your customers want.
 					</p>
 
 					<hr id="consultation" />
@@ -95,29 +100,6 @@
 
 					<form method="GET" id="consultationForm">
 						<div class="fields">
-							<div class="field">
-								<label for="company"
-									>Company Name<span class="asterisk">*</span></label
-								>
-								<input
-									type="text"
-									name="company"
-									id="company"
-									pattern="[\w\s]{3,}"
-									placeholder="Company Name"
-									required
-								/>
-							</div>
-							<div class="field">
-								<label for="industry"
-									>Industry<span class="asterisk">*</span></label
-								>
-								<select type="text" name="industry" id="industry" required>
-									<option value="" class="value" selected disabled>
-										-- Choose an Industry --
-									</option>
-								</select>
-							</div>
 							<div class="field">
 								<label for="answer1"
 									>QUESTION 1<span class="asterisk">*</span></label
@@ -167,6 +149,29 @@
 									required
 								></textarea>
 							</div>
+							<div class="field">
+								<label for="company"
+									>Company / Organization<span class="asterisk">*</span></label
+								>
+								<input
+									type="text"
+									name="company"
+									id="company"
+									pattern="[\w\s]{3,}"
+									placeholder="Name of Company / Organization"
+									required
+								/>
+							</div>
+							<div class="field">
+								<label for="industry"
+									>Industry<span class="asterisk">*</span></label
+								>
+								<select type="text" name="industry" id="industry" required>
+									<option value="" class="value" selected disabled>
+										-- Choose an Industry --
+									</option>
+								</select>
+							</div>
 						</div>
 						<ul class="actions">
 							<li>
@@ -181,13 +186,13 @@
 						changes and prioritize where to invest your time and resources.
 						Considering the trade-offs involved when choosing what tools and
 						systems to use reduces risk, ensuring that things work as expected
-						and align with your needs. When there are pain points that cause
-						frustration for you or your customers, we use that information to
-						build the ideal solution so you can focus on your long-term goals.
-						The next step is to finish your
-						<a href="#contact">free consultation</a>. Choose a time and you will
-						receive a completed proposal with specific recommendations to get
-						started!
+						and align with your requirements. When there are pain points that
+						cause frustration for you or your customers, we use that information
+						to build the ideal solution so you can focus on your long-term
+						goals. The next step is to
+						<a href="#contact">finish your free consultation</a>. Choose a time
+						and you will receive a completed proposal with specific
+						recommendations to get started!
 					</p>
 
 					<hr id="about" />
@@ -197,15 +202,14 @@
 						<a
 							href="./assets/docs/-Randall Brown-RESUME.pdf"
 							download="-Randall Brown-RESUME"
-							><h3 class="bold-link alt">View Resume</h3></a
-						>
-						<a href="#contact"><h3 class="bold-link alt">Coffee Chat</h3></a>
+							><h3 id="resumeLink" class="bold-link"></h3
+						></a>
 					</div>
 
 					<hr id="about" />
 					<h2 class="align-center">About Me</h2>
 
-					<p id="intro" class="top">
+					<p id="intro" class="about">
 						I love trying new things and being creative! When I'm not coding,
 						you can find me listening to music or exploring fun ways to stay
 						active. I enjoy learning and exploring new ideas. Every challenge is
@@ -215,22 +219,41 @@
 					<div id="tech" class="icon-container">
 						<h3 class="align-center">Languages & Tools</h3>
 						<ul class="icons center stack child">
-							<li><img src="images/icons8-html-48.png" alt="" /></li>
-							<li><img src="images/icons8-css-48.png" alt="" /></li>
-							<li><img src="images/icons8-javascript-48.png" alt="" /></li>
-							<li><img src="images/icons8-node-js-48.png" alt="" /></li>
-							<li><img src="images/icons8-python-48.png" alt="" /></li>
-							<li><img src="images/icons8-django-48.png" alt="" /></li>
-							<li><img src="images/icons8-mongo-db-48.png" alt="" /></li>
-							<li><img src="images/icons8-postgresql-48.png" alt="" /></li>
-							<li><img src="images/icons8-git-48.png" alt="" /></li>
+							<li><img src="images/icons8-html-48.png" alt="HTML icon." /></li>
+							<li><img src="images/icons8-css-48.png" alt="CSS icon." /></li>
+							<li>
+								<img
+									src="images/icons8-javascript-48.png"
+									alt="JavaScript icon."
+								/>
+							</li>
+							<li>
+								<img src="images/icons8-node-js-48.png" alt="Node.JS icon." />
+							</li>
+							<li>
+								<img src="images/icons8-python-48.png" alt="Python icon." />
+							</li>
+							<li>
+								<img src="images/icons8-django-48.png" alt="Django icon." />
+							</li>
+							<li>
+								<img src="images/icons8-mongo-db-48.png" alt="MongoDB icon." />
+							</li>
+							<li>
+								<img
+									src="images/icons8-postgresql-48.png"
+									alt="PostgreSQL icon."
+								/>
+							</li>
+							<li><img src="images/icons8-git-48.png" alt="Git icon." /></li>
 						</ul>
 					</div>
+					<a href="#contact"><h3 id="chatLink" class="bold-link"></h3></a>
 
-					<p id="intro" class="top">
+					<p id="intro" class="about">
 						My current focus is on building web applications designed to support
-						young professionals, faculty advisors, and local community
-						organizations. I also freelance and create interactive educational
+						students, faculty advisors, community organizations, ant the next
+						generation of professionals. I also create interactive educational
 						resources for web development.
 					</p>
 					<hr />
@@ -238,31 +261,46 @@
 						<ul class="icons center">
 							<li>
 								<a
+									href="https://bsky.app/profile/rjaybrown.bsky.social"
+									aria-label="bluesky link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-bluesky"></i
+								></a>
+							</li>
+							<li>
+								<a
 									href="https://x.com/Rjaybrown"
-									class="icon brands fa-twitter-square"
-									aria-label="X link"
-									><span class="label">X</span></a
-								>
+									aria-label="x link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-x-twitter"></i
+								></a>
 							</li>
 							<li>
 								<a
 									href="https://github.com/RjayBrown"
-									class="icon brands fa-github"
 									aria-label="github link"
-									><span class="label">Github</span></a
-								>
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-github"></i
+								></a>
 							</li>
 							<li>
 								<a
 									href="https://www.linkedin.com/in/randall-brown-078530110/"
-									class="icon brands fa-linkedin"
-									><span class="label" aria-label="linkedin link"
-										>Instagram</span
-									></a
-								>
+									aria-label="linkedin link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-linkedin"></i
+								></a>
 							</li>
 						</ul>
-						<a href="#contact"><h3 class="bold-link alt">Contact</h3></a>
+						<a href="#services"><h3 class="bold-link">Back to Top</h3></a>
 					</div>
 				</article>
 
@@ -297,12 +335,12 @@
 								/>
 							</div>
 							<div class="field">
-								<label for="company">Company Name</label>
+								<label for="company">Company / Organization</label>
 								<input
 									type="text"
 									name="company"
 									id="company"
-									placeholder="Company Name"
+									placeholder="Name of Company / Organization"
 								/>
 							</div>
 							<div class="field">
@@ -321,9 +359,7 @@
 									<option value="" class="value" selected disabled>
 										-- Choose a Subject --
 									</option>
-									<option value="Coffee Chat" class="value">
-										☕️ Coffee Chat
-									</option>
+									<option value="Coffee Chat" class="value">Coffee Chat</option>
 									<option
 										value="Consultation - Standard Website (Info Page)"
 										class="value"
@@ -343,7 +379,7 @@
 								<input type="date" name="date" id="date" required />
 							</div>
 							<div class="field half">
-								<label for="time">Time</label>
+								<label for="time">Time<span class="asterisk">*</span></label>
 								<select type="text" name="time" id="time">
 									<option value="" class="value" selected disabled>
 										-- Choose a Time --
@@ -371,54 +407,61 @@
 						<ul class="icons center">
 							<li>
 								<a
+									href="https://bsky.app/profile/rjaybrown.bsky.social"
+									aria-label="bluesky link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-bluesky"></i
+								></a>
+							</li>
+							<li>
+								<a
 									href="https://x.com/Rjaybrown"
-									class="icon brands fa-twitter-square"
-									aria-label="X link"
-									><span class="label">X</span></a
-								>
+									aria-label="x link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-x-twitter"></i
+								></a>
 							</li>
 							<li>
 								<a
 									href="https://github.com/RjayBrown"
-									class="icon brands fa-github"
 									aria-label="github link"
-									><span class="label">Github</span></a
-								>
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-github"></i
+								></a>
 							</li>
 							<li>
 								<a
 									href="https://www.linkedin.com/in/randall-brown-078530110/"
-									class="icon brands fa-linkedin"
-									><span class="label" aria-label="linkedin link"
-										>Instagram</span
-									></a
-								>
+									aria-label="linkedin link"
+									target="_blank"
+									and
+									rel="noopener noreferrer"
+									><i class="fa-brands fa-linkedin"></i
+								></a>
 							</li>
 						</ul>
-						<a href="#contact"><h3 class="bold-link alt">Back to Top</h3></a>
+						<a href="#contact"><h3 class="bold-link">Back to Top</h3></a>
 					</div>
 				</article>
 			</div>
 
 			<!-- Footer -->
 			<footer id="footer">
-				<div class="icon-container">
-					<h3 class="align-center">Languages & Tools</h3>
-					<ul class="icons center stack child">
-						<li><img src="images/icons8-html-48.png" alt="" /></li>
-						<li><img src="images/icons8-css-48.png" alt="" /></li>
-						<li><img src="images/icons8-javascript-48.png" alt="" /></li>
-						<li><img src="images/icons8-node-js-48.png" alt="" /></li>
-						<li><img src="images/icons8-python-48.png" alt="" /></li>
-						<li><img src="images/icons8-django-48.png" alt="" /></li>
-						<li><img src="images/icons8-mongo-db-48.png" alt="" /></li>
-						<li><img src="images/icons8-postgresql-48.png" alt="" /></li>
-						<li><img src="images/icons8-git-48.png" alt="" /></li>
-					</ul>
+				<h4 class="theme-title">THEME</h4>
+				<div class="theme-container">
+					<span class="theme red"></span>
+					<span class="theme dark"></span>
+					<span class="theme blue"></span>
 				</div>
 
 				<p class="copyright">
-					Website by Randall Brown<br />&copy; 2024 7ONE Consulting Group. All
+					Website by Randall Brown<br />&copy; 2025 7ONE Consulting Group. All
 					rights reserved.<br />
 				</p>
 			</footer>

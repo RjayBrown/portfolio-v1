@@ -1,6 +1,62 @@
+const page = document.querySelector("#page");
+const toggleBtns = document.querySelectorAll(".theme");
+const darkThemeIcon = document.querySelector(".dark");
+const redThemeIcon = document.querySelector(".red");
+const blueThemeIcon = document.querySelector(".blue");
+
 // ON PAGE LOAD
+
 // Get user data from local storage
 let userData = JSON.parse(localStorage.getItem("data"));
+
+// Get theme from local storage, dark by default
+getTheme();
+function getTheme() {
+	const theme = localStorage.getItem("theme");
+	toggleTheme(theme);
+}
+
+// Change theme on user action
+toggleBtns.forEach((btn) => {
+	btn.addEventListener("click", () => toggleTheme(btn.classList[1]));
+});
+
+function toggleTheme(theme) {
+	if (!theme || theme === "dark") {
+		page.classList = "dark";
+		redThemeIcon.classList.remove("active");
+		blueThemeIcon.classList.remove("active");
+		darkThemeIcon.classList.add("active");
+		localStorage.setItem("theme", "dark");
+	}
+
+	if (theme === "red") {
+		page.classList = "red";
+		darkThemeIcon.classList.remove("active");
+		blueThemeIcon.classList.remove("active");
+		redThemeIcon.classList.add("active");
+		localStorage.setItem("theme", "red");
+	}
+
+	if (theme === "blue") {
+		page.classList = "blue";
+		darkThemeIcon.classList.remove("active");
+		redThemeIcon.classList.remove("active");
+		blueThemeIcon.classList.add("active");
+		localStorage.setItem("theme", "blue");
+	}
+}
+
+// Change dispolay text on smaller mobile devices
+const resumeLink = document.querySelector("#resumeLink");
+const chatLink = document.querySelector("#chatLink");
+if (window.innerWidth < 400) {
+	resumeLink.textContent = "My Resume";
+	chatLink.textContent = "Chat";
+} else {
+	resumeLink.textContent = "View Resume";
+	chatLink.textContent = "Let's Chat!";
+}
 
 const consultationForm = document.querySelector("#consultationForm");
 const companyName = document.querySelector("#company");
@@ -15,27 +71,21 @@ const nameField = document.querySelector("#name");
 const subjectField = document.querySelector("#subject");
 const dateField = document.querySelector("#date");
 
-// Create industry dropdown list
-const industries = getIndustries();
+// Create optgroup element for industry groups and add to each dropdown list
+const industryGroups = getIndustries();
 
-industries.forEach((type) => {
-	const optionEl = document.createElement("option");
-	optionEl.setAttribute("value", type);
-	optionEl.textContent = type;
-	optionEl.classList.add("value");
-
-	const optionEl2 = document.createElement("option");
-	optionEl2.setAttribute("value", type);
-	optionEl2.textContent = type;
-	optionEl2.classList.add("value");
-
-	industryList.forEach((dropdown, i) => {
-		i === 0 ? dropdown.appendChild(optionEl) : dropdown.appendChild(optionEl2);
+industryGroups.forEach((group) => {
+	industryList.forEach((dropdown) => {
+		const optgroupEl = createOptionGroup(group.sector, group.industries);
+		dropdown.appendChild(optgroupEl);
 	});
 });
 
-// Create time dropdown list (open, close, timeslot) - args in military time
-generateTimeDropdown(11, 20, 30);
+// Create time dropdown list
+const earliestTime = 11;
+const latestTime = 20;
+const timeSlot = 30;
+generateTimeDropdown(earliestTime, latestTime, timeSlot);
 
 // CONFIG (CONNECTED FORMS)
 
@@ -203,47 +253,73 @@ function generateTimeDropdown(earliest, latest, slot) {
 }
 
 // CONFIG INDUSTRIES
+function createOptionGroup(title, options) {
+	const optGroupEl = document.createElement("optgroup");
+	optGroupEl.setAttribute("label", title);
+	options.forEach((option) => {
+		const optionEl = document.createElement("option");
+		optionEl.setAttribute("value", option);
+		optionEl.textContent = option;
+		optionEl.classList.add("value");
+		optGroupEl.appendChild(optionEl);
+	});
+
+	return optGroupEl;
+}
+
 function getIndustries() {
 	return [
-		"Accounting",
-		"Agriculture",
-		"Architecture",
-		"Automotive",
-		"Biotechnology",
-		"Construction",
-		"Consulting",
-		"Education",
-		"Energy",
-		"Entertainment",
-		"Environmental Services",
-		"Fashion",
-		"Finance",
-		"Food & Beverage",
-		"Healthcare",
-		"Hospitality",
-		"Import & Export",
-		"Information Technology",
-		"Insurance",
-		"Legal",
-		"Logistics",
-		"Manufacturing",
-		"Marketing",
-		"Media & Broadcasting",
-		"Mining",
-		"Nonprofit",
-		"Pharmaceuticals",
-		"Public Relations",
-		"Publishing",
-		"Real Estate",
-		"Retail",
-		"Science & Research",
-		"Security",
-		"Technology",
-		"Telecommunications",
-		"Transportation",
-		"Travel & Tourism",
-		"Utilities",
-		"Veterinary",
-		"Warehousing",
+		{
+			sector: "Creative & Media",
+			industries: [
+				"Entertainment",
+				"Fashion",
+				"Media & Broadcasting",
+				"Public Relations",
+				"Publishing",
+			],
+		},
+		{
+			sector: "Education & Research",
+			industries: ["Education", "Environmental Services", "Science & Research"],
+		},
+		{
+			sector: "Finance",
+			industries: ["Accounting", "Bookkeeping", "Consulting"],
+		},
+		{
+			sector: "Healthcare",
+			industries: ["Healthcare", "Pharmaceuticals", "Veterinary"],
+		},
+		{
+			sector: "Industrial & Manufacturing",
+			industries: [
+				"Automotive",
+				"Construction",
+				"Electrical",
+				"Logistics",
+				"Manufacturing",
+				"Plumbing",
+				"Warehousing",
+			],
+		},
+		{
+			sector: "Legal & Public Sector",
+			industries: ["Government", "Legal"],
+		},
+		{
+			sector: "Nonprofit",
+			industries: ["Nonprofit"],
+		},
+		{
+			sector: "Local Services",
+			industries: [
+				"Beauty",
+				"Food & Beverage",
+				"Hospitality",
+				"Local Shop",
+				"Travel & Tourism",
+			],
+		},
 	];
 }
